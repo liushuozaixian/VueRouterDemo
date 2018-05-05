@@ -4,6 +4,12 @@
     <div class="blue-font" @click="handleJumpRouter">
       点击我切换到一级路由2
     </div>
+    <div class="blue-font" @click="handleJumpRouter1">
+      点击我切换到一级动态路由4(由1切入)
+    </div>
+    <div class="blue-font" @click="handleJumpRouter2">
+      点击我切换到一级动态路由4(由2切入)
+    </div>
   </div>
 </template>
 
@@ -17,6 +23,12 @@
       handleJumpRouter () {
         console.log(this.$router);
         this.$router.push('/FirstTwo')
+      },
+      handleJumpRouter1 () {
+        this.$router.push('/FirstFour/1')
+      },
+      handleJumpRouter2 () {
+        this.$router.push('/FirstFour/2')
       }
     }
   }
