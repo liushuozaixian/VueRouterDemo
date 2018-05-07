@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="blue-font">
     我是一级路由2
     <div>
       <router-link to="/FirstThree">点击我切换到一级路由3</router-link>
@@ -17,6 +17,9 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+  .blue-font{
+    color: aquamarine;
+  }
 
 </style>
