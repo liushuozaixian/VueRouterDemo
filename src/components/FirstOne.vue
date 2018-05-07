@@ -10,6 +10,11 @@
     <div class="blue-font" @click="handleJumpRouter2">
       点击我切换到一级动态路由4(由2切入)
     </div>
+    <div>
+      <div @click="handleJumpRouter3" class="blue-font">子路由1</div>
+      <div @click="handleJumpRouter4" class="blue-font">子路由2</div>
+    </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -19,9 +24,17 @@
     data () {
       return {}
     },
+    mounted () {
+
+    },
+//    beforeRouteUpdate (to, from, next) {
+//      // react to route changes...
+//      // don't forget to call next()
+//      console.log('FirstOne中的路由更新')
+//      next()
+//    },
     methods: {
       handleJumpRouter () {
-        console.log(this.$router);
         this.$router.push('/FirstTwo')
       },
       handleJumpRouter1 () {
@@ -29,6 +42,12 @@
       },
       handleJumpRouter2 () {
         this.$router.push('/FirstFour/2')
+      },
+      handleJumpRouter3 () {
+        this.$router.push('/Second/小1')
+      },
+      handleJumpRouter4 () {
+        this.$router.push('/Second/2')
       }
     }
   }
