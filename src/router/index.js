@@ -45,7 +45,8 @@ export default new Router({
           path: '',
           component: Second
         },
-      ]
+      ],
+      alias: '/FirstTwo1'
     },
     {
       path: '/FirstThree',
