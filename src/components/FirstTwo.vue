@@ -13,6 +13,9 @@
     name: 'FirstTwo',
     data () {
       return {}
+    },
+    beforeRouteEnter () {
+      console.log('FirstTwo组件内部守卫');
     }
   }
 </script>

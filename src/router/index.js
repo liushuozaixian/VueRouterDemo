@@ -13,6 +13,10 @@ export default new Router({
       path: '/',
       name: 'FirstOne',
       component: FirstOne,
+      beforeEnter: (to, from, next) => {
+        console.log('FirstOne路由独享的守卫')
+        next()
+      },
       children: [
         // {
         //   path: '/',
