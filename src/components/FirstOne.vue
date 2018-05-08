@@ -35,13 +35,34 @@
 //    },
     methods: {
       handleJumpRouter () {
-        this.$router.push('FirstTwo')
+        this.$router.push({
+          path: 'FirstTwo'
+        })
       },
       handleJumpRouter1 () {
-        this.$router.push('FirstFour/1')
+        this.$router.push(
+          {
+            name: 'FirstFour',
+            params: {first: 1},
+            query: {query1: 'dsg'}
+          },
+          function () {
+            console.log('已经完全进入到了路由FirstFour')
+          },
+          function () {
+            console.log('进入到了路由FirstFour的过程中导航到相同的路由、或在当前导航完成之前导航到另一个不同的路由')
+          }
+        )
       },
       handleJumpRouter2 () {
-        this.$router.push('/FirstFour/2')
+        this.$router.push(
+          '/FirstFour/2',
+          function () {
+            console.log('已经完全进入到了路由FirstFour')
+          },
+          function () {
+            console.log('进入到了路由FirstFour的过程中导航到相同的路由、或在当前导航完成之前导航到另一个不同的路由')
+          })
       },
       handleJumpRouter3 () {
         this.$router.push('/Second/小1')
