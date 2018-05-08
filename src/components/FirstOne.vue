@@ -35,10 +35,10 @@
 //    },
     methods: {
       handleJumpRouter () {
-        this.$router.push('/FirstTwo')
+        this.$router.push('FirstTwo')
       },
       handleJumpRouter1 () {
-        this.$router.push('/FirstFour/1')
+        this.$router.push('FirstFour/1')
       },
       handleJumpRouter2 () {
         this.$router.push('/FirstFour/2')
