@@ -25,7 +25,7 @@
       return {}
     },
     mounted () {
-
+      console.log('history:', history)
     },
 //    beforeRouteUpdate (to, from, next) {
 //      // react to route changes...

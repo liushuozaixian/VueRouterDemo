@@ -35,7 +35,11 @@ export default new Router({
     {
       path: '/FirstTwo',
       name: 'FirstTwo',
-      component: FirstTwo
+      components: {
+        default: FirstTwo,
+        a: FirstOne,
+        b: FirstThree
+      }
     },
     {
       path: '/FirstThree',
