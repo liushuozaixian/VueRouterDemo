@@ -36,13 +36,13 @@
     methods: {
       handleJumpRouter () {
         this.$router.push({
-          path: 'FirstTwo'
+          path: '/FirstTwo'
         })
       },
       handleJumpRouter1 () {
         this.$router.push(
           {
-            name: 'FirstFour',
+            name: '/FirstFour',
             params: {first: 1},
             query: {query1: 'dsg'}
           },

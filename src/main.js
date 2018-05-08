@@ -6,6 +6,10 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+router.beforeEach((to, from, next) => {
+  console.log('路由发生了改变', to, from);
+  next();
+});
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
