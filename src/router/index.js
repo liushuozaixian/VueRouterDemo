@@ -39,7 +39,13 @@ export default new Router({
         default: FirstTwo,
         a: FirstOne,
         b: FirstThree
-      }
+      },
+      children: [
+        {
+          path: '',
+          component: Second
+        },
+      ]
     },
     {
       path: '/FirstThree',

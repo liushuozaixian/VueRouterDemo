@@ -4,6 +4,7 @@
     <div>
       <router-link to="/FirstThree">点击我切换到一级路由3</router-link>
     </div>
+    <router-view></router-view>
   </div>
 </template>
 
