@@ -51,6 +51,10 @@ export default new Router({
       path: '/FirstThree',
       name: 'FirstThree',
       component: FirstThree
+      // redirect: to => {
+      //   console.log('dsg', to)
+      //   return '/'
+      // }
     },
     {
       path: '/FirstFour/:first',
