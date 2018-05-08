@@ -60,7 +60,8 @@ export default new Router({
     {
       path: '/FirstFour/:first',
       name: 'FirstFour',
-      component: FirstFour
+      component: FirstFour,
+      props: true
     }
   ]
 });

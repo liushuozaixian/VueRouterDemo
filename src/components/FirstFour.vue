@@ -1,7 +1,7 @@
 <template>
   <div>
     我是一级路由4
-    <div>此路由所带的参数为: {{$route.params.first}}</div>
+    <div>此路由所带的参数为: {{first}}</div>
     <div class="blue-font" @click="handleJumpRouter">
       点击我切换到一级路由2
     </div>
@@ -11,6 +11,7 @@
 <script>
   export default {
     name: 'FirstFour',
+    props: ['first'],
     data () {
       return {}
     },
