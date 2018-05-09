@@ -5,6 +5,9 @@
     <div class="blue-font" @click="handleJumpRouter">
       点击我切换到一级路由2
     </div>
+    <div class="blue-font" @click="handleJumpRouter2">
+      点击我切换到一级路由5
+    </div>
   </div>
 </template>
 
@@ -21,6 +24,9 @@
     methods: {
       handleJumpRouter () {
         this.$router.push('/FirstTwo')
+      },
+      handleJumpRouter2 () {
+        this.$router.push('/FirstFive')
       }
     }
   }

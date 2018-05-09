@@ -14,8 +14,9 @@
     data () {
       return {}
     },
-    beforeRouteEnter () {
+    beforeRouteEnter (to, from, next) {
       console.log('FirstTwo组件内部守卫');
+      next()
     }
   }
 </script>

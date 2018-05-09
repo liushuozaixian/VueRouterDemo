@@ -4,6 +4,7 @@ import FirstOne from '@/components/FirstOne';
 import FirstTwo from '@/components/FirstTwo';
 import FirstThree from '@/components/FirstThree';
 import FirstFour from '@/components/FirstFour';
+import FirstFive from '@/components/FirstFive';
 import Second from '@/components/Second';
 Vue.use(Router);
 
@@ -14,8 +15,8 @@ export default new Router({
       name: 'FirstOne',
       component: FirstOne,
       beforeEnter: (to, from, next) => {
-        console.log('FirstOne路由独享的守卫')
-        next()
+        console.log('FirstOne路由独享的守卫');
+        next();
       },
       children: [
         // {
@@ -66,6 +67,27 @@ export default new Router({
       name: 'FirstFour',
       component: FirstFour,
       props: true
+    },
+    {
+      path: '/FirstFive',
+      name: 'FirstFive',
+      component: FirstFive,
+      meta: {
+        dsg: '大硕哥！'
+      },
+      children: [
+        {
+          path: '',
+          redirect: 'five1'
+        },
+        {
+          path: 'five1',
+          component: Second,
+          meta: {
+            dsg2: '大硕哥2！'
+          }
+        }
+      ]
     }
   ]
 });
