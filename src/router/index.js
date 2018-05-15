@@ -1,7 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import FirstOne from '@/components/FirstOne';
-import FirstTwo from '@/components/FirstTwo';
+// import FirstOne from '@/components/FirstOne';
+const FirstOne = () => import(/* webpackChunkName: "group-foo" */'@/components/FirstOne');
+// import FirstTwo from '@/components/FirstTwo';
+const FirstTwo = () => import(/* webpackChunkName: "group-foo" */'@/components/FirstTwo');
 import FirstThree from '@/components/FirstThree';
 import FirstFour from '@/components/FirstFour';
 import FirstFive from '@/components/FirstFive';
@@ -12,7 +14,7 @@ export default new Router({
   scrollBehavior (to, from, savedPosition) {
     // return 期望滚动到哪个的位置
     if (to.hash) {
-      console.log('dsghash:', to.hash)
+      console.log('dsghash:', to.hash);
       // return {
       //   selector: to.hash
       // };
@@ -20,9 +22,9 @@ export default new Router({
     console.log('dsgPosition:', savedPosition);
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve({ x: 0, y: 0 })
-      }, 500)
-    })
+        resolve({x: 0, y: 0});
+      }, 500);
+    });
   },
   routes: [
     {
