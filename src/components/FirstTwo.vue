@@ -5,6 +5,31 @@
       <router-link to="/FirstThree">点击我切换到一级路由3</router-link>
     </div>
     <router-view></router-view>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
+    ...<br>
   </div>
 </template>
 
@@ -23,7 +48,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-  .blue-font{
+  .blue-font {
     color: aquamarine;
   }
 

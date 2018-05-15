@@ -9,6 +9,21 @@ import Second from '@/components/Second';
 Vue.use(Router);
 
 export default new Router({
+  scrollBehavior (to, from, savedPosition) {
+    // return 期望滚动到哪个的位置
+    if (to.hash) {
+      console.log('dsghash:', to.hash)
+      // return {
+      //   selector: to.hash
+      // };
+    }
+    console.log('dsgPosition:', savedPosition);
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ x: 0, y: 0 })
+      }, 500)
+    })
+  },
   routes: [
     {
       path: '/',
