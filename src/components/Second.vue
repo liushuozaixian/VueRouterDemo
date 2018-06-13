@@ -2,6 +2,7 @@
   <div>
     我是二级路由！！！！！！！
     <div>
+      <router-view></router-view>
       我的参数是{{$route.params.id}}
     </div>
     <div @click="handleJumpPage" class="blue-font">点击我跳到一级路由2</div>

@@ -34,16 +34,16 @@
 </template>
 
 <script>
-  export default {
-    name: 'FirstTwo',
-    data () {
-      return {}
-    },
-    beforeRouteEnter (to, from, next) {
-      console.log('FirstTwo组件内部守卫');
-      next()
-    }
+export default {
+  name: 'FirstTwo',
+  data () {
+    return {}
+  },
+  beforeRouteEnter (to, from, next) {
+    console.log('FirstTwo组件内部守卫');
+    next()
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

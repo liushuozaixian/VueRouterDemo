@@ -8,6 +8,7 @@ import FirstThree from '@/components/FirstThree';
 import FirstFour from '@/components/FirstFour';
 import FirstFive from '@/components/FirstFive';
 import Second from '@/components/Second';
+import dsgliuchao from '@/components/dsgliuchao';
 Vue.use(Router);
 
 export default new Router({
@@ -94,15 +95,17 @@ export default new Router({
       },
       children: [
         {
-          path: '',
-          redirect: 'five1'
-        },
-        {
           path: 'five1',
           component: Second,
           meta: {
             dsg2: '大硕哥2！'
-          }
+          },
+          children: [
+            {
+              path: 'five11',
+              component: dsgliuchao,
+            }
+          ]
         }
       ]
     }
